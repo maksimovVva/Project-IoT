@@ -1,6 +1,6 @@
 import Edison
 
-edison = edison.Edison()
+edison = Edison.Edison()
 
 # light sensor, sound sensor, vibration sensor
 
