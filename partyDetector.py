@@ -1,4 +1,4 @@
-import edison
+import Edison
 
 edison = edison.Edison()
 
