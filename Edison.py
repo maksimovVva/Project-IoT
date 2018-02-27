@@ -140,4 +140,4 @@ class Edison(object):
         dictionary["Status"] = "PARTY IS DETECTED!"
     else:
         dictionary["Status"] = "Party is not detected!"
-
+    return dictionary
