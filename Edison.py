@@ -6,7 +6,7 @@ import pyupm_mic as upmMicrophone
 import time
 from random import randint
 from thread import *
-from urllib
+import urllib
 
 class Edison(object):
 
