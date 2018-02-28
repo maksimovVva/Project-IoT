@@ -6,7 +6,7 @@ import pyupm_mic as upmMicrophone
 import time
 from random import randint
 from thread import *
-from urllib import request
+from urllib
 
 class Edison(object):
 
@@ -143,5 +143,5 @@ class Edison(object):
 
   def sendMessage(self):
     url = "https://sms.ru/sms/send?api_id=BDEBF543-3DBB-273B-96C8-928C78CABFB5&to=79082356289&msg=PARTY+IS+DETECTED!!!+:)&json=0"
-    request.urlopen(url)
+    urllib.urlopen(url)
 
