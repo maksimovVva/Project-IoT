@@ -6,6 +6,7 @@ import pyupm_mic as upmMicrophone
 import time
 from random import randint
 from thread import *
+import urllib
 
 class Edison(object):
 
@@ -110,7 +111,6 @@ class Edison(object):
       self.setBuzzerOn()
       time.sleep(0.01)
 
-# for Nastya :)
   def isParty(self):
     sound = self.getLoudness()
     light = self.getBrightness()
@@ -127,7 +127,6 @@ class Edison(object):
         party = True
     return party
 
-# for Nastya :)
   def getSensorsValue(self):
     sound = self.getLoudness()
     light = self.getBrightness()
@@ -141,3 +140,8 @@ class Edison(object):
     else:
         dictionary["Status"] = "Party is not detected!"
     return dictionary
+
+  def sendMessage(self):
+    url = "https://sms.ru/sms/send?api_id=BDEBF543-3DBB-273B-96C8-928C78CABFB5&to=79082356289&msg=PARTY+IS+DETECTED!!!+:)&json=0"
+    urllib.request.urlopen(url)
+

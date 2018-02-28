@@ -11,6 +11,7 @@ while(True):
         if (not edison.isParty()):
             pass
         else:
+            edison.sendMessage()
             while(edison.isParty()):
                 edison.displayAlarm()
             edison.setBuzzerOff()
@@ -21,6 +22,7 @@ while(True):
             if(not edison.isParty()):
                 edison.displayLight()
             else:
+                edison.sendMessage()
                 while (edison.isParty()):
                     edison.displayAlarm()
                 edison.setBuzzerOff()
@@ -31,6 +33,7 @@ while(True):
             if (not edison.isParty()):
                 edison.displaySound()
             else:
+                edison.sendMessage()
                 while (edison.isParty()):
                     edison.displayAlarm()
                 edison.setBuzzerOff()
@@ -41,6 +44,7 @@ while(True):
             if (not edison.isParty()):
                 edison.displayVibration()
             else:
+                edison.sendMessage()
                 while (edison.isParty()):
                     edison.displayAlarm()
                 edison.setBuzzerOff()
@@ -51,6 +55,7 @@ while(True):
             if (not edison.isParty()):
                 pass
             else:
+                edison.sendMessage()
                 while (edison.isParty()):
                     edison.displayAlarm()
                 edison.setBuzzerOff()
