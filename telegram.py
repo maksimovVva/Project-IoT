@@ -28,7 +28,7 @@ def plot_graph(memlist, title, ylabel):
     ax.spines["right"].set_visible(False)
     ax.spines["left"].set_visible(False)
 
-    plt.xlabel('Время')
+    plt.xlabel('Time')
     plt.ylabel(ylabel)
     plt.title(title)
     plt.grid()
