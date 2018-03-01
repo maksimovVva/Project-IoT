@@ -1,13 +1,26 @@
 from flask import Flask
-import json
 
 app = Flask(__name__)
 
 @app.route('/loudness')
 def getLoudness():
-    data = {"answer": "55"}
-    data_json = json.dumps(data)
-    return data_json
+    return "55"
+
+@app.route('/brightness')
+def getbrightness():
+    return "56"
+
+@app.route('/vibration')
+def getvibration():
+    return "57"
+
+@app.route('/isParty')
+def getisParty():
+    return "58"
+
+@app.route('/allSensors')
+def getallSensors():
+    return "59"
 
 if __name__ == "__main__":
     app.debug = True

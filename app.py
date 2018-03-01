@@ -5,36 +5,44 @@ import json
 app = Flask(__name__)
 edison = Edison.Edison()
 
-@app.route('/is_party')
+@app.route('/isParty')
 def isParty():
     active = edison.isParty()
     if active:
-        data = {"answer": "yes"}
+        data = "PARTY IS DETECTED!"
     else:
-        data = {"answer": "no"}
-    data_json = json.dumps(data)
-    return data_json
+        data = "There are no party :("
+    return data
 
 
 @app.route('/loudness')
 def getLoudness():
-    data = {"answer": str(edison.getLoudness())}
-    data_json = json.dumps(data)
-    return data_json
+    data = "Sound is " +str(edison.getLoudness())
+    return data
 
 
 @app.route('/brightness')
 def getBrightness():
-    data = {"answer": str(edison.getBrightness())}
-    data_json = json.dumps(data)
-    return data_json
+    data = "Light is " +str(edison.getBrightness())
+    return data
 
 
 @app.route('/vibration')
 def getVibration():
-    data = {"answer": str(edison.getVibration())}
-    data_json = json.dumps(data)
-    return data_json
+    data = "Vibration is " + str(edison.getVibration())
+    return data
+
+@app.route('/allSensors')
+def getVibration():
+    data = "Sound is " + str(edison.getLoudness())
+    data += "\nLight is " + str(edison.getBrightness())
+    data += "\nVibration is " + str(edison.getVibration())
+    active = edison.isParty()
+    if active:
+        data += "\n\nPARTY IS DETECTED!"
+    else:
+        data += "\n\nThere are no party :("
+    return data
 
 
 if __name__ == "__main__":
