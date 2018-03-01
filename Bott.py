@@ -3,8 +3,7 @@ from telegram.ext import MessageHandler, Filters, Updater, CommandHandler
 import pymorphy2
 import requests
 
-from lxml import objectify, etree, html
-import urllib
+from urllib import request
 
 morph = pymorphy2.MorphAnalyzer()
 Tag = morph.TagClass
@@ -48,35 +47,36 @@ def loudness(bot, update):
     flag = True
     bot.sendChatAction(chat_id=update.message.chat_id, action=telegram.ChatAction.TYPING)
     bot.sendMessage(chat_id=update.message.chat_id,
-                    text=urllib.urlopen('http://localhost:8998/loudness').read().decode('utf-8'))
+                    text=request.urlopen('http://localhost:8998/loudness').read().decode('utf-8'))
 
 
 def brightness(bot, update):
     flag = True
     bot.sendChatAction(chat_id=update.message.chat_id, action=telegram.ChatAction.TYPING)
     bot.sendMessage(chat_id=update.message.chat_id,
-                    text=urllib.urlopen('http://localhost:8998/brightness').read().decode('utf-8'))
+                    text=request.urlopen('http://localhost:8998/brightness').read().decode('utf-8'))
 
 
 def vibration(bot, update):
     flag = True
     bot.sendChatAction(chat_id=update.message.chat_id, action=telegram.ChatAction.TYPING)
     bot.sendMessage(chat_id=update.message.chat_id,
-                    text=urllib.urlopen('http://localhost:8998/vibration').read().decode('utf-8'))
+                    text=request.urlopen('http://localhost:8998/vibration').read().decode('utf-8'))
+
 
 
 def allSensors(bot, update):
     flag = True
     bot.sendChatAction(chat_id=update.message.chat_id, action=telegram.ChatAction.TYPING)
     bot.sendMessage(chat_id=update.message.chat_id,
-                    text=urllib.urlopen('http://localhost:8998/allSensors').read().decode('utf-8'))
+                    text=request.urlopen('http://localhost:8998/allSensors').read().decode('utf-8'))
 
 
 def isParty(bot, update):
     flag = True
     bot.sendChatAction(chat_id=update.message.chat_id, action=telegram.ChatAction.TYPING)
     bot.sendMessage(chat_id=update.message.chat_id,
-                    text=urllib.urlopen('http://localhost:8998/isParty').read().decode('utf-8'))
+                    text=request.urlopen('http://localhost:8998/isParty').read().decode('utf-8'))
 
 
 def echo(bot, update):
