@@ -3,8 +3,8 @@ from telegram.ext import MessageHandler, Filters, Updater, CommandHandler
 import pymorphy2
 import requests
 
-import Edison #isParty, getSensorsValue
-edison = Edison.Edison()
+# import Edison #isParty, getSensorsValue
+# edison = Edison.Edison()
 
 morph = pymorphy2.MorphAnalyzer()
 Tag = morph.TagClass
@@ -51,12 +51,12 @@ def help_command(bot, update):
 
 
 def alarm(bot, update):
-    flag = True  # тут будет функция
+    flag = True
     bot.sendChatAction(chat_id=update.message.chat_id, action=telegram.ChatAction.TYPING)
     bot.sendMessage(chat_id=update.message.chat_id, text='Party is detected!')
 
 
-def echo(bot, update):  # ЭТО ПОКА ТОЛЬКО ПРИМЕР, БУДЕТ БОЛЬШЕ ЗАПРОСОВ
+def echo(bot, update):
     bot.sendChatAction(chat_id=update.message.chat_id, action=telegram.ChatAction.TYPING)
     encoded_q = update.message.text.lower().encode('utf-8')
     mess = update.message.text
