@@ -38,24 +38,24 @@ def plot_graph(memlist, title, ylabel):
     f = open('/tmp/graph.png', 'rb')
     return f
 
-
+# "Привет! \n" +
+#                          "Меня зовут Малышка-бот. \n" +
+#                          "Я слежу, где тусят хозяева Эдисона. \n" +
+#                          "/help - получить справку, как мной пользоваться \n" +
+#                          "/start - информация обо мне" +
+#                          "/alarm - спалился ли хозяин Эдисона"
 def start(bot, update):
     bot.sendChatAction(chat_id=update.message.chat_id, action=telegram.ChatAction.TYPING)
     bot.sendMessage(chat_id=update.message.chat_id,
-                    text="Привет! \n" +
-                         "Меня зовут Малышка-бот. \n" +
-                         "Я слежу, где тусят хозяева Эдисона. \n" +
-                         "/help - получить справку, как мной пользоваться \n" +
-                         "/start - информация обо мне" +
-                         "/alarm - спалился ли хозяин Эдисона",
+                    text="Hello",
                     parse_mode=telegram.ParseMode.HTML)
 
-
+# "/help - получить справку, как мной пользоваться \n" +
+#                          "/start - информация обо мне"
 def help_command(bot, update):
     bot.sendChatAction(chat_id=update.message.chat_id, action=telegram.ChatAction.TYPING)
     bot.sendMessage(chat_id=update.message.chat_id,
-                    text="/help - получить справку, как мной пользоваться \n" +
-                         "/start - информация обо мне")
+                    text="Mur")
 
 
 def alarm(bot, update):
@@ -69,7 +69,7 @@ def echo(bot, update):  # ЭТО ПОКА ТОЛЬКО ПРИМЕР, БУДЕТ 
     encoded_q = update.message.text.lower().encode('utf-8')
     mess = update.message.text
     bot.sendMessage(chat_id=update.message.chat_id,
-                    text=str(requests.get('0.0.0.0:8998/loudness'))
+                    text=str(requests.get('0.0.0.0:8998/loudness')))
 
 dispatcher.add_handler(CommandHandler('start', start))
 dispatcher.add_handler(CommandHandler('help', help_command))
