@@ -38,20 +38,12 @@ def plot_graph(memlist, title, ylabel):
     f = open('/tmp/graph.png', 'rb')
     return f
 
-# "Привет! \n" +
-#                          "Меня зовут Малышка-бот. \n" +
-#                          "Я слежу, где тусят хозяева Эдисона. \n" +
-#                          "/help - получить справку, как мной пользоваться \n" +
-#                          "/start - информация обо мне" +
-#                          "/alarm - спалился ли хозяин Эдисона"
 def start(bot, update):
     bot.sendChatAction(chat_id=update.message.chat_id, action=telegram.ChatAction.TYPING)
     bot.sendMessage(chat_id=update.message.chat_id,
                     text="Hello",
                     parse_mode=telegram.ParseMode.HTML)
 
-# "/help - получить справку, как мной пользоваться \n" +
-#                          "/start - информация обо мне"
 def help_command(bot, update):
     bot.sendChatAction(chat_id=update.message.chat_id, action=telegram.ChatAction.TYPING)
     bot.sendMessage(chat_id=update.message.chat_id,
