@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82e5c10b-6a4d-4596-9081-4c65f52952a1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/telegram.py" afterPath="$PROJECT_DIR$/telegram.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/telegram.py" afterPath="$PROJECT_DIR$/Bott.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,13 +23,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="telegram.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/telegram.py">
+      <file leaf-file-name="Bott.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Bott.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="272">
+              <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -79,6 +79,7 @@
         <option value="$PROJECT_DIR$/partyDetector.py" />
         <option value="$PROJECT_DIR$/Edison.py" />
         <option value="$PROJECT_DIR$/telegram.py" />
+        <option value="$PROJECT_DIR$/Bott.py" />
       </list>
     </option>
   </component>
@@ -349,12 +350,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/telegram.py">
+    <entry file="file://$PROJECT_DIR$/Bott.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="272">
+          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>

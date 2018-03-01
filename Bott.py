@@ -1,5 +1,5 @@
-import telegram
-from telegram.ext import MessageHandler, Filters, Updater, CommandHandler
+import Bott
+from Bott.ext import MessageHandler, Filters, Updater, CommandHandler
 import pymorphy2
 import requests
 
@@ -39,25 +39,25 @@ def plot_graph(memlist, title, ylabel):
     return f
 
 def start(bot, update):
-    bot.sendChatAction(chat_id=update.message.chat_id, action=telegram.ChatAction.TYPING)
+    bot.sendChatAction(chat_id=update.message.chat_id, action=Bott.ChatAction.TYPING)
     bot.sendMessage(chat_id=update.message.chat_id,
                     text="Hello",
-                    parse_mode=telegram.ParseMode.HTML)
+                    parse_mode=Bott.ParseMode.HTML)
 
 def help_command(bot, update):
-    bot.sendChatAction(chat_id=update.message.chat_id, action=telegram.ChatAction.TYPING)
+    bot.sendChatAction(chat_id=update.message.chat_id, action=Bott.ChatAction.TYPING)
     bot.sendMessage(chat_id=update.message.chat_id,
                     text="Mur")
 
 
 def alarm(bot, update):
     flag = True
-    bot.sendChatAction(chat_id=update.message.chat_id, action=telegram.ChatAction.TYPING)
+    bot.sendChatAction(chat_id=update.message.chat_id, action=Bott.ChatAction.TYPING)
     bot.sendMessage(chat_id=update.message.chat_id, text='Party is detected!')
 
 
 def echo(bot, update):
-    bot.sendChatAction(chat_id=update.message.chat_id, action=telegram.ChatAction.TYPING)
+    bot.sendChatAction(chat_id=update.message.chat_id, action=Bott.ChatAction.TYPING)
     encoded_q = update.message.text.lower().encode('utf-8')
     mess = update.message.text
     bot.sendMessage(chat_id=update.message.chat_id,
