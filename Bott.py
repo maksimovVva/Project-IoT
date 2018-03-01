@@ -1,5 +1,5 @@
-import Bott
-from Bott.ext import MessageHandler, Filters, Updater, CommandHandler
+import telegram
+from telegram.ext import MessageHandler, Filters, Updater, CommandHandler
 import pymorphy2
 import requests
 
