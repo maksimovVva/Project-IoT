@@ -33,7 +33,7 @@ def getVibration():
     return data
 
 @app.route('/allSensors')
-def getVibration():
+def getAllSensors():
     data = "Sound is " + str(edison.getLoudness())
     data += "\nLight is " + str(edison.getBrightness())
     data += "\nVibration is " + str(edison.getVibration())
