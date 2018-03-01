@@ -39,7 +39,7 @@ def echo(bot, update):
     encoded_q = update.message.text.lower().encode('utf-8')
     mess = update.message.text
     bot.sendMessage(chat_id=update.message.chat_id,
-                    text=str(requests.get('0.0.0.0:8998/loudness')))
+                    text=str(requests.get('localhost:8998/loudness')))
 
 dispatcher.add_handler(CommandHandler('start', start))
 dispatcher.add_handler(CommandHandler('help', help_command))
